@@ -3,71 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        
-        .form-container {
-            width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px gray;
-        }
-        
-        h2 {
-            text-align: center;
-        }
-        
-        .form-group {
-            margin-bottom: 15px;
-        }
-        
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        input,
-        select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid gray;
-            border-radius: 4px;
-        }
-        
-        .gender-group {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-        
-        .gender-group label {
-            font-weight: normal;
-            display: inline;
-        }
-        
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: blue;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        button:hover {
-            opacity: 0.9;
-        }
-    </style>
 </head>
 
 <body>
@@ -79,22 +19,31 @@
 
             <div class="form-group">
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" required>
+                <div class="input-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
             </div>
 
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
             </div>
 
             <div class="form-group">
                 <label>Gender</label>
-                <div class="gender-group">
+                <div class="gender-options">
                     <input type="radio" id="male" name="gender" value="Male">
                     <label for="male">Male</label>
 
@@ -108,17 +57,20 @@
 
             <div class="form-group">
                 <label for="course">Course / Interest</label>
-                <select id="course" name="course">
+                <div class="input-box">
+                    <i class="fa-solid fa-book"></i>
+                    <select id="course" name="course">
                     <option value="">Select Course</option>
                     <option value="Web Development">Web Development</option>
                     <option value="Graphic Design">Graphic Design</option>
                     <option value="Data Science">Data Science</option>
                     <option value="Digital Marketing">Digital Marketing</option>
-                </select>
+                    </select>
+                </div>
             </div>
-
-            <button type="submit">Submit</button>
-
+            <button type="submit" class="submit-button">
+                <i class="fa-solid fa-paper-plane"></i> Submit
+            </button>
         </form>
     </div>
 
