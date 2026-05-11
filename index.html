@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js "></script>
-
 <body>
 
     <div class="form-container">
@@ -70,8 +68,7 @@
                 </div>
             </div>
             <button type="submit" class="submit-button">
-                <i class="fa-solid fa-paper-plane"></i> Registrer Now
-
+                <i class="fa-solid fa-paper-plane"></i> Register Now
             </button>
             <p class="message" id="message">Registration successful!</p>
         </form>
@@ -92,13 +89,13 @@
                 .then(data => {
                     alert("Form submitted successfully");
                 });
-            // message.style.display = "block";
+            message.style.display = "block";
 
-            // form.reset();
+            form.reset();
 
-            // setTimeout(() => {
-            //     message.style.display = "none";
-            // }, 3000);
+            setTimeout(() => {
+                message.style.display = "none";
+            }, 3000);
         });
     </script>
 </body>

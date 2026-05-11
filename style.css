@@ -17,9 +17,10 @@
     }
     
     h1 {
+        font-family: 'handlee', cursive;
         text-align: center;
         margin-bottom: 20px;
-        color: #ffffff;
+        color: rgb(130, 10, 106);
     }
     
     .form-group {
@@ -76,7 +77,7 @@
     }
     
     .submit-button:hover {
-        background-color: darkcyan;
+        background-color: rgb(74, 1, 51);
         /* opacity: 0.9; */
         transform: scale(1.05);
     }
@@ -89,7 +90,7 @@
         margin-top: 20px;
         text-align: center;
         font-weight: bold;
-        color: rgb(76, 85, 188);
+        color: rgb(97, 13, 81);
         display: none;
         animation: fadeIn 0.5s ease;
     }
