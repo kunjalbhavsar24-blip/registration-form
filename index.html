@@ -3,19 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
+
+<script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js "></script>
 
 <body>
 
     <div class="form-container">
-        <h2>Registration Form</h2>
+        <h1>Registration Form</h1>
 
-        <form>
+        <form id="registrationForm" action="/submit" method="POST">
 
             <div class="form-group">
                 <label for="fullname">Full Name</label>
@@ -70,10 +71,36 @@
             </div>
             <button type="submit" class="submit-button">
                 <i class="fa-solid fa-paper-plane"></i> Registrer Now
+
             </button>
+            <p class="message" id="message">Registration successful!</p>
         </form>
     </div>
+    <script>
+        const form = document.getElementById("registrationForm");
+        const message = document.getElementById("message");
 
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+
+            fetch("/submit", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert("Form submitted successfully");
+                });
+            // message.style.display = "block";
+
+            // form.reset();
+
+            // setTimeout(() => {
+            //     message.style.display = "none";
+            // }, 3000);
+        });
+    </script>
 </body>
 
 </html>

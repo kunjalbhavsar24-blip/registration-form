@@ -11,15 +11,15 @@
         width: 400px;
         /* margin: 50px auto; */
         padding: 30px;
-        background: white;
+        background: rgb(227, 171, 215);
         border-radius: 8px;
         box-shadow: 0px 0px 10px gray;
     }
     
-    h2 {
+    h1 {
         text-align: center;
         margin-bottom: 20px;
-        color: #251d1d;
+        color: #ffffff;
     }
     
     .form-group {
@@ -30,7 +30,7 @@
         display: block;
         font-weight: bold;
         margin-bottom: 5px;
-        color: #444;
+        color: #ffffff;
     }
     
     .input-box {
@@ -39,11 +39,11 @@
         border: 1px solid #ccc;
         border-radius: 6px;
         padding: 10px;
-        background: #fafafa;
+        background: white;
     }
     
     .input-box i {
-        color: blue;
+        color: rgb(130, 10, 106);
         margin-right: 10px
     }
     
@@ -67,7 +67,7 @@
         padding: 12px;
         border: none;
         border-radius: 8px;
-        background-color: blue;
+        background-color: rgb(130, 10, 106);
         color: white;
         font-size: 16px;
         font-weight: bold;
@@ -83,4 +83,24 @@
     
     .submit-button i {
         margin-right: 8px;
+    }
+    
+    .message {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: rgb(76, 85, 188);
+        display: none;
+        animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
